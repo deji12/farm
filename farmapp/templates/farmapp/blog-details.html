@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>  
+{% include 'farmapp/links.html' %}
+</head>
+<div class="stricky-header stricked-menu main-menu">
+<div class="sticky-header__content"></div>
+</div>
+<section class="page-header">
+<div class="page-header__bg" style="background-image: url(https://res.cloudinary.com/dxojb4izx/image/upload/v1650711122/farm/assets/images/backgrounds/page-header-bg-1-1_xnknnx.jpg);"></div>
+
+<div class="container">
+<ul class="thm-breadcrumb list-unstyled">
+<li><a href="{% url 'home' %}">Home</a></li>
+<li>/</li>
+<li><span>{{post.title}}</span></li>
+</ul>
+<h2>{{post.title}}</h2>
+</div>
+</section>
+<section class="blog-details">
+<div class="container">
+<div class="row">
+<div class="col-lg-8">
+<div class="blog-details__image">
+<img src="{{post.thumb}}" class="img-fluid" alt="">
+</div>
+<div class="blog-card__content">
+<div class="blog-card__date">{{post.dou}}</div>
+<div class="blog-card__meta">
+ <a href="#"><i class="far fa-user-circle"></i> {{post.user}}</a>
+<a href="#"><i class="far fa-comments"></i> 2 Comments</a>
+</div>
+<h3><a href="#">{{post.title}}</a></h3>
+</div>
+<div class="blog-details__content">
+<p>{{post.body|safe}}</p>
+</p>
+</div>
+<div class="blog-details__meta">
+<div class="blog-details__tags">
+<span>Tags:</span>
+<a href="#">{{post.tag1}},</a>
+<a href="#">{{post.tag2}}</a>
+</div>
+<div class="blog-details__social">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</div><br><br>
+<!-- <div class="blog-author">
+<div class="blog-author__image">
+<img src="assets/images/blog/blog-author-1-1.jpg" alt="">
+</div>
+<div class="blog-author__content">
+<h3>Kevin Martin</h3>
+<p>It has survived not only five centuries, but also the leap into electronic typesetting,
+remaining unchanged. It was popularised in the sheets containing.</p>
+</div>
+</div> -->
+<div class="blog-comment">
+<h2>{{total}} Comments</h2>
+
+{% for i in coms %}
+<div class="blog-comment__box">
+<div class="blog-comment__image">
+<img style="width: 100px;" src="https://res.cloudinary.com/dxojb4izx/image/upload/v1651345375/farm/assets/images/anonymous-user_ygfw4t.png" alt="">
+</div>
+<div class="blog-comment__content">
+<h3>{{i.name}}</h3>
+<p>{{i.body}}</p>
+<!-- <a href="#" class="thm-btn">Reply</a> -->
+</div>
+</div>
+</div>
+{% endfor %}
+<div class="comment-form">
+<h2>Leave a Comment</h2>
+<form action="" method="POST" class="contact-one__form contact-form-validated">
+    {% csrf_token %}
+<div class="row">
+<div class="col-lg-6">
+<input type="text" name="name" placeholder="Full Name" required>
+</div>
+<div class="col-lg-12">
+<textarea name="message" placeholder="Write Message" required></textarea>
+</div>
+<div class="col-lg-12">
+<button type="submit" class="thm-btn">Submit Comment</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="blog-sidebar">
+<div class="blog-sidebar__search">
+<!-- <form action="#">
+<input type="text" placeholder="Search">
+<button type="submit"><i class="agrikon-icon-magnifying-glass"></i></button>
+</form>
+</div>
+<div class="blog-sidebar__posts">
+<h3>Recent Posts</h3>
+<ul>
+
+{% for j in all %}
+<li>
+<img src="{{j.thumb}}" alt="">
+<span><i class="far fa-comments"></i> 2 Comments
+</span>
+<h4><a href="{% url 'pd' j.title %}">{{j.title}}</a></h4>
+</li>
+{% endfor %}
+</ul>
+</div> -->
+<div class="blog-sidebar__categories">
+<h3>Catgories</h3>
+<ul>
+<li>
+<a href="#"><i class="agrikon-icon-right-arrow"></i>Agriculture
+</a>
+</li>
+<li>
+<a href="#"><i class="agrikon-icon-right-arrow"></i>
+Organic Food</a>
+</li>
+<!-- <li>
+<a href="#"><i class="agrikon-icon-right-arrow"></i>Dairy Farm</a>
+</li> -->
+<li>
+<a href="#"><i class="agrikon-icon-right-arrow"></i>Economy Solution</a>
+</li>
+<li>
+<a href="#"><i class="agrikon-icon-right-arrow"></i>Harvests Innovations</a>
+</li>
+</ul>
+</div>
+<div class="blog-sidebar__tags">
+<h3>Tags</h3>
+<div class="blog-sidebar__tags-links">
+<a href="#">Agriculture,</a>
+<a href="#">Food,</a>
+<a href="#">Healthy,</a>
+<a href="#">Dairy,</a>
+<a href="#">Organic,</a>
+<a href="#">Farm,</a>
+<a href="#">Economy</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+ </div>
+</section>
+{% include 'farmapp/footer.html' %}
+</div>
+<div class="mobile-nav__wrapper">
+<div class="mobile-nav__overlay mobile-nav__toggler"></div>
+
+<div class="mobile-nav__content">
+<span class="mobile-nav__close mobile-nav__toggler"><i class="far fa-times"></i></span>
+<div class="logo-box">
+<a href="{% url 'home' %}" aria-label="logo image"><img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650806080/farm/assets/images/imgonline-com-ua-ReplaceColor-POyS7jsAIsahgB4O_wr3bus.png" width="155" alt=""></a>
+</div>
+
+<div class="mobile-nav__container"></div>
+
+<ul class="mobile-nav__contact list-unstyled">
+<li>
+<i class="agrikon-icon-email"></i>
+<a href="/cdn-cgi/l/email-protection#8fe1eaeaebe7eae3ffcfeee8fde6e4e0e1a1ece0e2"><span class="__cf_email__" data-cfemail="204e45454448454c5060414752494b4f4e0e434f4d">[email&#160;protected]</span></a>
+</li>
+<li>
+<i class="agrikon-icon-telephone"></i>
+<a href="tel:+234 803 8669 595">+234 803 8669 595</a>
+</li>
+</ul>
+<div class="mobile-nav__top">
+<div class="mobile-nav__language">
+<img src="assets/images/resources/flag-1-1.jpg" alt="">
+<label class="sr-only" for="language-select">select language</label>
+
+<select class="selectpicker" id="language-select">
+<option value="english">English</option>
+<option value="arabic">Arabic</option>
+</select>
+</div>
+<div class="mobile-nav__social">
+<a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+<a href="#" aria-label="facebook"><i class="fab fa-facebook-square"></i></a>
+<a href="#" aria-label="pinterest"><i class="fab fa-pinterest-p"></i></a>
+<a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="search-popup">
+<div class="search-popup__overlay search-toggler"></div>
+
+<div class="search-popup__content">
+<form action="#">
+<label for="search" class="sr-only">search here</label>
+<input type="text" id="search" placeholder="Search Here...">
+<button type="submit" aria-label="search submit" class="thm-btn">
+<i class="fa fa-search"></i>
+</button>
+</form>
+</div>
+
+</div>
+
+</body>
+</html>

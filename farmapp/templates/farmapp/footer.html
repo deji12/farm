@@ -1,0 +1,143 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<footer class="site-footer">
+    <img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650710547/farm/assets/images/icons/footer-bg-icon-1_ukgtya.png" class="site-footer__shape-1" alt="">
+    <img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650710543/farm/assets/images/icons/footer-bg-icon-2_yduc5m.png" class="site-footer__shape-2" alt="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+    <div class="footer-widget">
+    <a href="{% url 'home' %}" class="footer-widget__Logo">
+    <img style="width: 250px;" src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650806080/farm/assets/images/imgonline-com-ua-ReplaceColor-POyS7jsAIsahgB4O_wr3bus.png" width="153" alt="">
+    </a>
+    <p>Subscibe to our monthly email newsletter below:
+    </p>
+    <form action="#" data-url="YOUR_MAILCHIMP_URL" class="mc-form">
+    <input type="email" name="EMAIL" placeholder="Email Address">
+    <button type="submit"><i class="agrikon-icon-right-arrow"></i></button>
+    </form>
+    <div class="mc-form__response"></div>
+    <div class="footer__social">
+    <a href="#" class="fab fa-facebook-square"></a>
+    <a href="#" class="fab fa-twitter"></a>
+    <a href="#" class="fab fa-pinterest-p"></a>
+    <a href="#" class="fab fa-instagram"></a>
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+    <div class="footer-widget footer-widget__links-widget">
+    <h3 class="footer-widget__title">Links</h3>
+    <ul class="list-unstyled footer-widget__links">
+    <li><a href="{% url 'service' %}">Our Services</a></li>
+    <li><a href="{% url 'about' %}">About us</a></li>
+    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+    <!-- <li><a href="#">Upcoming Events</a></li>
+    <li><a href="#">Volunteers</a></li> -->
+    </ul>
+    </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+    <div class="footer-widget">
+    <h3 class="footer-widget__title">News</h3>
+    <ul class="list-unstyled footer-widget__post">
+        {% for i in all %}
+    <li>
+    <img src="{{i.thumb}}" alt="">
+    <div class="footer-widget__post-content">
+    <span>{{i.dou}}</span>
+    <h4><a href="{% url 'pd' i.title %}">How to grow vagetables in the forms</a></h4>
+    </div>
+    </li>
+ {% endfor %}
+    </ul>
+    </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+    <h3 class="footer-widget__title">Contact</h3>
+    <ul class="list-unstyled footer-widget__contact">
+    <li>
+    <i class="agrikon-icon-telephone"></i>
+    <a href="tel:+234-803-8669-595">+234 803 8669 595</a>
+    </li>
+    <li>
+    <i class="agrikon-icon-email"></i>
+   <a href="#"><span>kingsvinefarm@gmail.com</span></a>
+    </li>
+    <li>
+    <i class="agrikon-icon-pin"></i>
+    <a href="#">Oredo Local Government, Benin City, Edo State. Nigeria</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </footer>
+    <div class="bottom-footer">
+    <div class="container">
+    <p>© Copyright 2022 by kingsvineyardfarms.com</p>
+    <div class="bottom-footer__links">
+    <a href="{% url 'home' %}">Kingsvine Yard Farms</a>
+ 
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="mobile-nav__wrapper">
+    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+    
+    <div class="mobile-nav__content">
+    <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times" aria-hidden="true"></i></span>
+    <div class="logo-box">
+    <a href="{% url 'home' %}" aria-label="logo image"><img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" width="155" alt=""></a>
+    </div>
+    
+    <div class="mobile-nav__container"></div>
+    
+    <ul class="mobile-nav__contact list-unstyled">
+    <li>
+    <i class="agrikon-icon-email"></i>
+    <a href="#"><span>kingsvinefarm@gmail.com</span></a>
+    </li>
+    <li>
+    <i class="agrikon-icon-telephone"></i>
+    <a href="tel:+234 803 8669 595">+234 803 8669 595</a>
+    </li>
+    </ul>
+    <div class="mobile-nav__top">
+    <div class="mobile-nav__language">
+    <img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650710690/farm/assets/images/resources/flag-1-1_qrozpq.jpg" alt="">
+    <label class="sr-only" for="language-select">select language</label>
+    
+    <select class="selectpicker" id="language-select">
+    <option value="english">English</option>
+    <option value="arabic">Arabic</option>
+    </select>
+    </div>
+    <div class="mobile-nav__social">
+    <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" aria-label="facebook"><i class="fab fa-facebook-square"></i></a>
+    <a href="#" aria-label="pinterest"><i class="fab fa-pinterest-p"></i></a>
+    <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+    
+    <div class="search-popup">
+    <div class="search-popup__overlay search-toggler"></div>
+    
+    <div class="search-popup__content">
+    <form action="#">
+    <label for="search" class="sr-only">search here</label>
+    <input type="text" id="search" placeholder="Search Here...">
+    <button type="submit" aria-label="search submit" class="thm-btn">
+    <i class="fa fa-search"></i>
+    </button>
+    </form>
+    </div>
+    
+    </div>
+    
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>

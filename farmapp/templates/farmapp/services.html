@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services Page</title>
+
+{% include 'farmapp/links.html' %}
+
+</header>
+<div class="stricky-header stricked-menu main-menu">
+<div class="sticky-header__content"></div>
+</div>
+<section class="page-header">
+<div class="page-header__bg" style="background-image: url(https://res.cloudinary.com/dxojb4izx/image/upload/v1650711122/farm/assets/images/backgrounds/page-header-bg-1-1_xnknnx.jpg);"></div>
+
+<div class="container">
+<ul class="thm-breadcrumb list-unstyled">
+<li><a href="{% url 'home' %}">Home</a></li>
+<li>/</li>
+<li><span>Services</span></li>
+</ul>
+<h2>Our Services</h2>
+</div>
+</section>
+<section class="service-two service-two__service-page">
+<div class="container">
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="service-two__card">
+        <div class="service-two__card-image">
+        <img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650812814/farm/assets/images/snaill_myqcpy.webp" alt="">
+        </div>
+        <div class="service-two__card-content">
+        <div class="service-two__card-icon">
+        <i class="agrikon-icon-tractor"></i>
+        </div>
+        <h3><a href="{% url 'sd' %}">Snail Farming</a></h3>
+        <p>We rear and trade snails .</p>
+        </div>
+        </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="service-two__card">
+        <div class="service-two__card-image">
+        <img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650738830/farm/assets/images/chicken_prmsu2.jpg" alt="">
+        </div>
+        <div class="service-two__card-content">
+        <div class="service-two__card-icon">
+        <i class="agrikon-icon-organic-food"></i>
+        </div>
+        <h3><a href="{% url 'sd' %}">Poultry Farming</a></h3>
+        <p>We rear and trade poultry birds. </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="service-two__card">
+        <div class="service-two__card-image">
+        <img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650738692/farm/assets/images/cow_nomh2h.jpg" alt="">
+        </div>
+        <div class="service-two__card-content">
+        <div class="service-two__card-icon">
+        <i class="agrikon-icon-vegetable"></i>
+        </div>
+        <h3><a href="{% url 'sd' %}">Cattle Farming</a></h3>
+        <p>We are also into cattle rearing and trading </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="service-two__card">
+        <div class="service-two__card-image">
+        <img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650738680/farm/assets/images/goat_brrlno.jpg" alt="">
+        </div>
+        <div class="service-two__card-content">
+        <div class="service-two__card-icon">
+        <i class="agrikon-icon-dairy"></i>
+        </div>
+        <h3><a href="{% url 'sd' %}">Goat Farming</a></h3>
+        <p>Just like cattle farming, we are also into rearing and trading of goats</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+</section>
+<section class="feature-one">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<div class="feature-one__content">
+ <div class="block-title">
+<div class="block-title__image"></div>
+<p>What we’re offering</p>
+<h3>Better Agriculture for
+Better Future</h3>
+</div>
+<div class="feature-one__summery">
+<p>We are offering the best quality breed of livestock and poultry birds 
+there is on the market
+</p>
+</div>
+<ul class="list-unstyled feature-one__check-list">
+<li>
+<i class="agrikon-icon-tick"></i>
+Get the best and fresh organic products
+</li>
+<!-- <li>
+<i class="agrikon-icon-tick"></i>
+Get the best and fresh organic products
+</li> -->
+</ul>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="feature-one__image">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650710740/farm/assets/images/resources/feature-1-1_pknwln.jpg" alt="">
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="call-to-action__two jarallax" data-jarallax="" data-speed="0.3" data-imgposition="50% 50%">
+<img class="call-to-action__two__bg jarallax-img" src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650711159/farm/assets/images/backgrounds/cta-2-bg-1_bjtlzy.jpg" alt="parallax-image">
+<div class="container">
+<h3>Agriculture Matters to
+the Future</h3>
+<a href="{% url 'about' %}" class="thm-btn">Discover More</a>
+</div>
+</section>
+<section class="service-one service-one__about">
+<div class="container">
+<div class="block-title text-center">
+<div class="block-title__image"></div>
+<p>Our Services list</p>
+<h3>What We’re Doing</h3>
+</div>
+<div class="row">
+<div class="col-md-12 col-lg-4">
+<div class="service-one__box">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650710715/farm/assets/images/services/service-1-1_e0nac5.jpg" alt="">
+<div class="service-one__box-content">
+<h3><a href="service-details.html">Agriculture Leader</a></h3>
+</div>
+</div>
+</div>
+<div class="col-md-12 col-lg-4">
+<div class="service-one__box">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650710729/farm/assets/images/services/service-1-2_zratyo.jpg" alt="">
+<div class="service-one__box-content">
+<h3><a href="service-details.html">Quality Standards</a></h3>
+</div>
+</div>
+</div>
+<div class="col-md-12 col-lg-4">
+<div class="service-one__box">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650710718/farm/assets/images/services/service-1-3_twc4ka.jpg" alt="">
+<div class="service-one__box-content">
+<h3><a href="service-details.html">Organic Services</a></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="client-carousel client-carousel__has-border-top">
+<div class="container">
+<div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 140, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
+                "0": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 2
+                },
+                "375": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 2
+                },
+                "575": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 3
+                },
+                "767": {
+                    "spaceBetween": 50,
+                    "slidesPerView": 4
+                },
+                "991": {
+                    "spaceBetween": 50,
+                    "slidesPerView": 5
+                },
+                "1199": {
+                    "spaceBetween": 100,
+                    "slidesPerView": 5
+                }
+            }}'>
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+ </div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dxojb4izx/image/upload/v1650807434/farm/assets/images/ayo3_nmzyix.png" alt="">
+</div>
+</div>
+</div>
+</div>
+</div>
+{% include 'farmapp/footer.html' %}
+</body>
+</html>

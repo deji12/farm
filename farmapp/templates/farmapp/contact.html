@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Page </title>
+<body>
+
+{% include 'farmapp/links.html' %}
+
+<div class="stricky-header stricked-menu main-menu">
+<div class="sticky-header__content"></div>
+</div>
+<section class="page-header">
+<div class="page-header__bg" style="background-image: url(https://res.cloudinary.com/dxojb4izx/image/upload/v1650711122/farm/assets/images/backgrounds/page-header-bg-1-1_xnknnx.jpg);"></div>
+
+<div class="container">
+<ul class="thm-breadcrumb list-unstyled">
+<li><a href="{% url 'home' %}">Home</a></li>
+<li>/</li>
+<li><span>Contact Us</span></li>
+</ul>
+<h2>Contact</h2>
+</div>
+</section>
+<section class="contact-one">
+<div class="container">
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
+<div class="contact-one__content">
+<div class="block-title">
+<div class="block-title__image"></div>
+<p>Contact now</p>
+<h3>Leave A Message</h3><br>
+{% if messages %}
+    {% for message in messages %}
+        <h4 style="color: rgb(2, 102, 2);">{{message}}</h4>
+    {% endfor %}
+{% endif %}
+</div>
+<div class="contact-one__summery">
+<p>Want to connect with us, we'd love to hear from you and we are here to answer 
+    any question you might have. Use the following form to contact us.
+</p>
+</div>
+<div class="contact-one__social">
+<a href="#"><i class="fab fa-facebook-square"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-12 col-lg-6 col-xl-8" id="form"> 
+<form action="#form" method="POST" class="contact-one__form contact-form-validated">
+    {% csrf_token %}
+<div class="row">
+<div class="col-lg-6">
+<input type="text" name="name" placeholder="Full Name" required>
+</div>
+<div class="col-lg-6">
+<input type="text" name="email" placeholder="Email Address" required>
+</div>
+<div class="col-lg-6">
+<input type="text" name="phone" placeholder="Phone Number">
+</div>
+<div class="col-lg-6">
+<input type="text" name="subject" placeholder="Subject" required>
+</div>
+<div class="col-lg-12">
+<textarea name="message" placeholder="Write Message" required></textarea>
+</div>
+<div class="col-lg-12">
+<button type="submit" class="thm-btn">Send a Message</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section class="contact-infos">
+<div class="container">
+<div class="inner-container wow fadeInUp" data-wow-duration="1500ms">
+<div class="row no-gutters">
+<div class="col-sm-12 col-md-12 col-lg-4">
+<div class="contact-infos__single">
+<h3>About Company</h3>
+<p>At kingsvine farm yard, we are involved with trading
+    and creating awareness of agricultuer and agricultural products.</p>
+</div>
+</div>
+<div class="col-sm-12 col-md-12 col-lg-4">
+<div class="contact-infos__single">
+<h3>Visit Company</h3>
+<p>Oredo Local Government, Benin City, Edo State. Nigeria</p>
+</div>
+</div>
+<div class="col-sm-12 col-md-12 col-lg-4">
+<div class="contact-infos__single">
+<h3>Call or Email</h3>
+<p><a href="#"><span>kingsvinefarm@gmail.com</span></a> <br>
+<a href="tel:+234 803 8669 595">+234 803 8669 595</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="google-map__home-two">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.468325274896!2d5.618123814822064!3d6.33332292710189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1040d3a0e837a2a3%3A0x765973b3968e1afa!2sOredo%20Local%20Govt.%20Secretariat!5e0!3m2!1sen!2s!4v1651593513493!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+{% include 'farmapp/footer.html' %}
+
+</body>
+</html>
