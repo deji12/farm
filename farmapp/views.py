@@ -21,6 +21,9 @@ def post_detail(request, name):
     serializer = PostSerializer(get_post)
     return Response(serializer.data)
 
+def landing(request):
+    return render(request, 'farmapp/index.html')
+
 def contact(request):
     if request.method == 'POST':
         name = request.POST['name']
